@@ -1,0 +1,102 @@
+:host { display: block; }
+
+.filter-btn {
+  background: var(--navy-3);
+  border: 1px solid var(--border);
+  color: var(--steel);
+  padding: 7px 18px;
+  border-radius: 2px;
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s;
+  &.active, &:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+  }
+}
+.portfolio-card {
+  background: var(--navy-3);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.22s;
+  &:hover { border-color: rgba(26,111,255,0.45); transform: translateY(-4px); }
+}
+.portfolio-visual {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.ba-toggle {
+  display: flex;
+  gap: 3px;
+  span {
+    background: rgba(0,0,0,0.6);
+    color: rgba(255,255,255,0.5);
+    padding: 4px 12px;
+    border-radius: 2px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: background 0.15s, color 0.15s;
+    &.act { background: var(--blue); color: #fff; }
+  }
+}
+.ba-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.stadium-icon-large {
+  font-size: 4rem;
+  color: rgba(255,255,255,0.08);
+}
+.portfolio-tag {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+  background: rgba(26,111,255,0.08);
+  border: 1px solid rgba(26,111,255,0.2);
+  padding: 3px 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+.portfolio-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.portfolio-stat {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.74rem;
+  color: var(--steel);
+  letter-spacing: 0.04em;
+}

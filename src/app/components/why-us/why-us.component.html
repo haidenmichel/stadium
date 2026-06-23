@@ -1,0 +1,19 @@
+<section id="why-us" class="bg-navy-2">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">The StadiumShine<br>Difference</h2>
+      <div class="blue-line mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-xl-4 fade-up" *ngFor="let f of features; let i = index" [class]="'delay-' + (i+1)">
+        <div class="why-card">
+          <div class="why-num">0{{ i + 1 }}</div>
+          <div class="why-icon"><i [class]="'bi bi-' + f.icon"></i></div>
+          <h4 class="why-title">{{ f.title }}</h4>
+          <p class="text-steel">{{ f.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

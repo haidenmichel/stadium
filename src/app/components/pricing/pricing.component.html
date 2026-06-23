@@ -1,0 +1,33 @@
+<section id="pricing" class="bg-navy-2">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label">Investment</span>
+      <h2 class="section-title">Simple, Transparent<br>Pricing</h2>
+      <div class="blue-line mx-auto"></div>
+      <p class="text-steel mx-auto" style="max-width:500px">All packages include our certified crew, equipment, eco-friendly chemicals, and a full service report.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6 fade-up" *ngFor="let p of plans; let i = index" [class]="'delay-' + (i+1)">
+        <div class="pricing-card" [class.featured]="p.featured">
+          <div *ngIf="p.featured" class="featured-badge">Most Popular</div>
+          <div class="plan-name">{{ p.name }}</div>
+          <div class="plan-price">
+            <span class="price-num">{{ p.price }}</span>
+            <span class="price-unit text-steel">{{ p.unit }}</span>
+          </div>
+          <p class="text-steel plan-desc">{{ p.desc }}</p>
+          <ul class="plan-features">
+            <li *ngFor="let f of p.features" [class.disabled]="!f.included">
+              <i class="bi me-2" [class.bi-check-circle-fill]="f.included" [class.text-blue]="f.included" [class.bi-x-circle]="!f.included" [class.text-steel]="!f.included"></i>
+              {{ f.text }}
+            </li>
+          </ul>
+          <a href="#contact" class="plan-btn" [class.featured-btn]="p.featured">
+            {{ p.featured ? 'Get Started' : 'Request Quote' }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-steel mt-4 small">All pricing is customized per venue. Contact us for a free on-site assessment.</p>
+  </div>
+</section>

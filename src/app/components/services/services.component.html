@@ -1,0 +1,28 @@
+<section id="services" class="bg-navy-2">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Professional Stadium<br>Cleaning Services</h2>
+      <div class="blue-line mx-auto"></div>
+      <p class="text-steel mx-auto" style="max-width:560px">
+        From pre-season prep to post-game cleanup, we handle the full scope of stadium cleanliness at an industrial scale.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fade-up" *ngFor="let s of services; let i = index" [class]="'delay-' + (i+1)">
+        <div class="card-dark h-100 p-4">
+          <div class="service-icon mb-3">
+            <i [class]="'bi bi-' + s.icon"></i>
+          </div>
+          <h4 class="service-title">{{ s.title }}</h4>
+          <p class="text-steel">{{ s.desc }}</p>
+          <ul class="service-list mt-3">
+            <li *ngFor="let f of s.features">
+              <i class="bi bi-check2 text-blue me-2"></i>{{ f }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

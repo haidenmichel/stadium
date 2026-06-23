@@ -1,0 +1,39 @@
+<section id="portfolio" class="bg-navy-2">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title">Venues We've<br>Transformed</h2>
+      <div class="blue-line mx-auto"></div>
+      <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+        <button class="filter-btn" [class.active]="activeFilter === f" (click)="setFilter(f)" *ngFor="let f of filters">{{ f }}</button>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fade-up" *ngFor="let p of filteredProjects(); let i = index" [class]="'delay-' + (i+1)">
+        <div class="portfolio-card">
+          <div class="portfolio-visual" [style.background]="p.color">
+            <div class="portfolio-overlay">
+              <div class="ba-toggle">
+                <span [class.act]="!showAfter[i]" (click)="showAfter[i]=false">Before</span>
+                <span [class.act]="showAfter[i]" (click)="showAfter[i]=true">After</span>
+              </div>
+              <div class="ba-label">{{ showAfter[i] ? 'After StadiumShine' : 'Before Service' }}</div>
+            </div>
+            <div class="stadium-icon-large">
+              <i [class]="'bi bi-' + p.icon"></i>
+            </div>
+          </div>
+          <div class="portfolio-info p-3">
+            <span class="portfolio-tag">{{ p.type }}</span>
+            <h5 class="portfolio-title mt-2">{{ p.name }}</h5>
+            <p class="text-steel small mb-0">{{ p.desc }}</p>
+            <div class="d-flex gap-3 mt-2">
+              <span class="portfolio-stat"><i class="bi bi-lightning text-blue me-1"></i>{{ p.sqft }}</span>
+              <span class="portfolio-stat"><i class="bi bi-clock text-blue me-1"></i>{{ p.time }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

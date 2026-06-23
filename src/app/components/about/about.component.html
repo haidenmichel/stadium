@@ -1,0 +1,57 @@
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 fade-up">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Built on the Field.<br>Proven at Scale.</h2>
+        <div class="blue-line"></div>
+        <p class="text-steel mb-4">
+          StadiumShine Pro was founded by Sterling Michel — a lifelong sports fan and serial entrepreneur
+          who brings a rare blend of technology discipline and genuine love for the game to the world of
+          commercial stadium maintenance.
+        </p>
+        <p class="text-steel mb-4">
+          Sterling's background is in software and technology consulting. Before launching StadiumShine Pro,
+          he built and exited a healthcare technology company and has operated a technology consulting firm
+          for over a decade. He applied that same systems-thinking approach to stadium operations — treating
+          every venue as a complex infrastructure problem that demands precision, scheduling, and scale.
+        </p>
+        <p class="text-steel mb-4">
+          A former semi-pro soccer player out of New York and an avid collector of sports memorabilia
+          (including a signed Denver Nuggets 2023 championship jersey), Sterling built StadiumShine Pro
+          because he understood what these venues mean to the fans who fill them — and how much the
+          environment matters to that experience.
+        </p>
+        <div class="founder-card mt-4">
+          <img src="assets/sterling-michel.jpg" alt="Sterling Michel" class="founder-avatar-img">
+          <div>
+            <div class="founder-name">Sterling Michel</div>
+            <div class="text-steel" style="font-size:0.85rem">Founder & CEO, StadiumShine Pro</div>
+            <div class="founder-links mt-2">
+              <a href="mailto:smichel@5searches.com" class="founder-link">
+                <i class="bi bi-envelope-fill me-1"></i>smichel@5searches.com
+              </a>
+              <a href="https://www.linkedin.com/in/sterling-michel/" target="_blank" rel="noopener" class="founder-link">
+                <i class="bi bi-linkedin me-1"></i>LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="about-badges d-flex flex-wrap gap-2 mt-4">
+          <span class="badge-item" *ngFor="let b of badges">
+            <i class="bi bi-check-circle-fill text-blue me-1"></i>{{ b }}
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-up delay-2">
+        <div class="stats-grid">
+          <div class="stat-card" *ngFor="let s of stats">
+            <div class="stat-big">{{ s.value }}</div>
+            <div class="stat-name">{{ s.label }}</div>
+            <div class="stat-desc text-steel">{{ s.desc }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

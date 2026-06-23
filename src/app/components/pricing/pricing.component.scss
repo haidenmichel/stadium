@@ -1,0 +1,96 @@
+:host { display: block; }
+
+.pricing-card {
+  background: var(--navy-3);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 36px 30px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+  &.featured {
+    border-color: var(--blue);
+    background: #0A1730;
+  }
+}
+.featured-badge {
+  position: absolute;
+  top: -13px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue);
+  color: #fff;
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.plan-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.plan-price { margin-bottom: 14px; }
+.price-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2.8rem;
+  letter-spacing: -0.03em;
+  color: var(--blue-bright);
+  line-height: 1;
+  margin-right: 6px;
+}
+.price-unit {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+}
+.plan-desc { font-size: 0.9rem; margin-bottom: 24px; color: var(--steel); }
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 auto;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  li {
+    font-size: 0.88rem;
+    color: var(--off-white);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    &.disabled { color: var(--steel); opacity: 0.45; }
+  }
+}
+.plan-btn {
+  display: block;
+  text-align: center;
+  margin-top: 28px;
+  padding: 13px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 2px;
+  color: var(--off-white);
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.15s;
+  &:hover { border-color: var(--blue); color: var(--blue-bright); }
+  &.featured-btn {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+    &:hover { background: #0F5CE8; border-color: #0F5CE8; }
+  }
+}

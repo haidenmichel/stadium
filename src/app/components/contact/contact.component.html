@@ -1,0 +1,95 @@
+<section id="contact" class="bg-navy-2">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5 fade-up">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Request a Free<br>Site Assessment</h2>
+        <div class="blue-line"></div>
+        <p class="text-steel mb-4">
+          Tell us about your venue and we'll schedule a free walkthrough and provide a detailed quote within 24 hours. No obligation.
+        </p>
+        <div class="contact-info">
+          <div class="info-item" *ngFor="let item of contactInfo">
+            <div class="info-icon"><i [class]="'bi bi-' + item.icon"></i></div>
+            <div>
+              <div class="info-label">{{ item.label }}</div>
+              <div class="info-val">{{ item.value }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 fade-up delay-2">
+        <div class="contact-form-card">
+          <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-control form-control-dark" name="firstName" ngModel required placeholder="Marcus">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-control form-control-dark" name="lastName" ngModel required placeholder="Reeves">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-control form-control-dark" name="email" ngModel required placeholder="ops@yourstadium.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control form-control-dark" name="phone" ngModel placeholder="(555) 000-0000">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Venue Name *</label>
+                <input type="text" class="form-control form-control-dark" name="venue" ngModel required placeholder="MetroSteel Arena">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Venue Type</label>
+                <select class="form-control form-control-dark" name="venueType" ngModel>
+                  <option value="">Select type...</option>
+                  <option>NFL Stadium</option>
+                  <option>MLB Ballpark</option>
+                  <option>NBA Arena</option>
+                  <option>NHL Arena</option>
+                  <option>MLS Stadium</option>
+                  <option>NCAA Football</option>
+                  <option>NCAA Basketball</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Seating Capacity</label>
+                <select class="form-control form-control-dark" name="capacity" ngModel>
+                  <option value="">Select range...</option>
+                  <option>Under 10,000</option>
+                  <option>10,000 – 25,000</option>
+                  <option>25,000 – 50,000</option>
+                  <option>50,000 – 75,000</option>
+                  <option>Over 75,000</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Services Needed</label>
+                <div class="checkbox-grid">
+                  <label class="check-item" *ngFor="let s of serviceOptions">
+                    <input type="checkbox" [name]="s.key" ngModel>
+                    <span>{{ s.label }}</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Additional Details</label>
+                <textarea class="form-control form-control-dark" name="message" ngModel rows="4" placeholder="Tell us about specific areas of concern, preferred timeline, or any other details..."></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-primary-custom w-100" [disabled]="submitted">
+                  <span *ngIf="!submitted"><i class="bi bi-send me-2"></i>Submit Request</span>
+                  <span *ngIf="submitted"><i class="bi bi-check2-circle me-2"></i>Request Sent!</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

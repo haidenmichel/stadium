@@ -1,0 +1,50 @@
+:host { display: block; }
+
+.process-track { position: relative; }
+.process-line {
+  position: absolute;
+  top: 54px; left: 10%;
+  width: 80%;
+  height: 1px;
+  background: var(--border);
+  pointer-events: none;
+}
+.process-card {
+  background: var(--navy-2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 36px 26px;
+  text-align: center;
+  position: relative;
+  transition: border-color 0.2s, transform 0.22s;
+  &:hover { border-color: rgba(26,111,255,0.45); transform: translateY(-4px); }
+}
+.step-num {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  color: var(--blue-bright);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.step-icon {
+  font-size: 1.8rem;
+  color: var(--blue);
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy-3);
+  border: 1px solid var(--border-2);
+  width: 62px; height: 62px;
+  border-radius: 3px;
+}
+.step-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 10px;
+}

@@ -1,0 +1,110 @@
+:host { display: block; }
+
+footer {
+  background: var(--navy-2);
+  border-top: 1px solid var(--border);
+  padding: 80px 0 0;
+}
+.footer-brand {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.footer-col-title {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+  margin-bottom: 18px;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li { margin-bottom: 10px; }
+  a {
+    color: var(--steel);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.15s;
+    &:hover { color: var(--white); }
+  }
+}
+.social-btn {
+  width: 36px; height: 36px;
+  border-radius: 3px;
+  background: var(--navy-3);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--steel);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.15s;
+  &:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+}
+.newsletter {
+  display: flex;
+  gap: 0;
+  margin-top: 10px;
+}
+.newsletter-input {
+  flex: 1;
+  background: var(--navy-3);
+  border: 1px solid var(--border);
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+  color: var(--off-white);
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  &::placeholder { color: rgba(122,139,173,0.4); }
+  &:focus { outline: none; border-color: var(--blue); }
+}
+.newsletter-btn {
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  border-left: none;
+  color: #fff;
+  padding: 0 16px;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  transition: background 0.15s;
+  &:hover { background: #0F5CE8; }
+}
+.cert-badge {
+  display: inline-block;
+  background: var(--navy-3);
+  border: 1px solid var(--border);
+  color: var(--steel);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-legal {
+  color: var(--steel);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  transition: color 0.15s;
+  &:hover { color: var(--white); }
+}

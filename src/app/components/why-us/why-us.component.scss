@@ -1,0 +1,42 @@
+:host { display: block; }
+
+.why-card {
+  background: var(--navy-3);
+  border: 1px solid var(--border);
+  border-top: 2px solid transparent;
+  border-radius: 3px;
+  padding: 32px 26px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  transition: border-color 0.2s, border-top-color 0.2s, transform 0.22s;
+  &:hover {
+    border-color: rgba(26,111,255,0.3);
+    border-top-color: var(--blue);
+    transform: translateY(-4px);
+  }
+}
+.why-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  color: rgba(26,111,255,0.06);
+  line-height: 1;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  letter-spacing: -0.04em;
+}
+.why-icon {
+  font-size: 1.6rem;
+  color: var(--blue);
+  margin-bottom: 16px;
+}
+.why-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 10px;
+}

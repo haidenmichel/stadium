@@ -1,0 +1,74 @@
+:host { display: block; }
+
+.testi-card {
+  background: var(--navy-2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 32px 28px;
+  position: relative;
+  transition: border-color 0.2s;
+  &:hover { border-color: var(--border-2); }
+  &::before {
+    content: '\201C';
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 5rem;
+    color: rgba(26,111,255,0.08);
+    position: absolute;
+    top: 8px; left: 20px;
+    line-height: 1;
+  }
+}
+.testi-quote {
+  color: var(--off-white);
+  line-height: 1.75;
+  font-size: 0.93rem;
+  position: relative;
+}
+.testi-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 20px;
+}
+.author-avatar {
+  width: 44px; height: 44px;
+  border-radius: 3px;
+  background: var(--blue-dim);
+  border: 1px solid rgba(26,111,255,0.35);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+.author-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--white);
+}
+.author-role { font-size: 0.78rem; color: var(--steel); }
+.author-venue {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--blue-bright);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.trust-item {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+  font-size: 0.72rem;
+  border: 1px solid var(--border);
+  padding: 8px 18px;
+  border-radius: 2px;
+}
