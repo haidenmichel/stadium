@@ -1,45 +1,53 @@
-<footer>
+<footer class="site-footer">
   <div class="container">
-    <div class="row g-5 pb-5">
-      <div class="col-lg-4">
-        <div class="footer-brand mb-3">
-          <i class="bi bi-droplet-fill text-blue me-2"></i>Stadium<span class="text-blue">Shine</span> Pro
-        </div>
-        <p class="text-steel" style="max-width:300px;font-size:0.9rem;line-height:1.7">
+
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <a class="footer-logo" routerLink="/">
+          Stadium<span class="logo-accent">Shine</span> Pro
+        </a>
+        <p class="footer-tagline">
           The nation's leading commercial pressure washing service for professional and collegiate sports venues.
         </p>
-        <div class="d-flex gap-3 mt-4">
-          <a class="social-btn" href="#"><i class="bi bi-linkedin"></i></a>
-          <a class="social-btn" href="#"><i class="bi bi-twitter-x"></i></a>
-          <a class="social-btn" href="#"><i class="bi bi-facebook"></i></a>
-          <a class="social-btn" href="#"><i class="bi bi-instagram"></i></a>
+        <div class="footer-socials">
+          <a class="social-link" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a class="social-link" href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+          <a class="social-link" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="social-link" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
         </div>
       </div>
-      <div class="col-sm-4 col-lg-2" *ngFor="let col of footerLinks">
+
+      <div class="footer-link-col" *ngFor="let col of footerLinks">
         <div class="footer-col-title">{{ col.title }}</div>
         <ul class="footer-links">
           <li *ngFor="let link of col.links"><a href="#{{ link.anchor }}">{{ link.label }}</a></li>
         </ul>
       </div>
-      <div class="col-sm-4 col-lg-4">
+
+      <div class="footer-news-col">
         <div class="footer-col-title">Stay Updated</div>
-        <p class="text-steel" style="font-size:0.88rem">Get industry tips and stadium maintenance insights.</p>
+        <p class="footer-news-desc">Get industry tips and stadium maintenance insights.</p>
         <div class="newsletter">
-          <input type="email" placeholder="your@email.com" class="newsletter-input">
-          <button class="newsletter-btn"><i class="bi bi-arrow-right"></i></button>
+          <input type="email" placeholder="your@email.com" class="news-input" aria-label="Email for newsletter">
+          <button class="news-btn" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
         </div>
-        <div class="certifications mt-4">
+        <div class="cert-badges">
           <span class="cert-badge" *ngFor="let c of certs">{{ c }}</span>
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p class="mb-0 text-steel small">© 2024 StadiumShine Pro LLC. All rights reserved.</p>
-      <div class="d-flex gap-4">
-        <a class="footer-legal" href="#">Privacy Policy</a>
-        <a class="footer-legal" href="#">Terms of Service</a>
-        <a class="footer-legal" href="#">Insurance Docs</a>
+      <p class="footer-copy">© 2024 StadiumShine Pro LLC. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a class="legal-link" href="#">Privacy Policy</a>
+        <a class="legal-link" href="#">Terms of Service</a>
+        <a class="legal-link" href="#">Insurance Docs</a>
       </div>
     </div>
+
+  </div>
+  <div class="tb-credit">
+    <p>Website created by <a href="https://techbudz.me" target="_blank" rel="noopener">Tech Budz</a>, Product Development Company.</p>
   </div>
 </footer>
